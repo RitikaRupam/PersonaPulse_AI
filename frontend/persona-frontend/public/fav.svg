@@ -1,0 +1,48 @@
+<svg
+  width="512"
+  height="512"
+  viewBox="0 0 256 256"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d76bff"/>
+      <stop offset="100%" stop-color="#7b2cff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Mask body -->
+  <path
+    d="
+      M64 256
+      C96 176, 176 144, 256 176
+      C336 144, 416 176, 448 256
+      C416 336, 336 368, 256 336
+      C176 368, 96 336, 64 256
+      Z
+    "
+    fill="url(#purpleGrad)"
+  />
+
+  <!-- Left eye cut -->
+  <path
+    d="
+      M152 256
+      C168 236, 208 236, 224 256
+      C208 276, 168 276, 152 256
+      Z
+    "
+    fill="#000"
+  />
+
+  <!-- Right eye cut -->
+  <path
+    d="
+      M288 256
+      C304 236, 344 236, 360 256
+      C344 276, 304 276, 288 256
+      Z
+    "
+    fill="#000"
+  />
+</svg>
