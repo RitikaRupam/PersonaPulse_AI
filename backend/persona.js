@@ -8,6 +8,7 @@ import "dotenv/config";
 /* ============================= */
 
 const app = express();
+const PORT = process.env.PORT;
 
 app.use(cors());
 app.use(express.json());
@@ -18,7 +19,7 @@ app.use(express.json());
 
 const client = new OpenAI({
   apiKey: process.env.GEMINI_API_KEY,
-  baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/",
+  baseURL: process.env.GEMINI_BASE_URL,
 });
 
 /* ============================= */
@@ -750,7 +751,7 @@ app.post("/chat", async (req, res) => {
 /* START SERVER */
 /* ============================= */
 
-app.listen(5000, () => {
-  console.log("🚀 Backend running on http://localhost:5000");
+app.listen(PORT, () => {
+  console.log(`🚀 Backend running on ${PORT}`);
   console.log("✅ Streaming enabled");
 });
